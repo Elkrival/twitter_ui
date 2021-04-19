@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main-shadow--: 2px 4px 15px -5px #000000;
+  }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+.container{
+    box-shadow: var(--main-shadow--);
+}
+.header{
+    align-self: start;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: auto;
+    align-content: start;
+    padding: 5px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+  }
+.card:nth-child(odd) {
+    background-color: white;
+}
+.card:nth-child(even) {
+    background-color: whitesmoke;
+}
+  .card__image {
+    flex: 0 1 auto;
+    margin: 3px;
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+  }
+  .card__username{
+      color: #02354F;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+  }
+  .card__text{
+    align-self: center;
+    border: solid white 1px;
+    align-self: flex-end;
+}
+.hashtag_section{
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    box-shadow: var(--main-shadow--);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card__hashtag{
+        align-items: center;
+        border-radius: 100px;
+        box-sizing: border-box;
+        display: flex;
+        padding: 10px 17px;
+        background-color:rgba(139, 235, 234, .5);
+        color: #1DA1F2;
+        margin: 4px;
 }
