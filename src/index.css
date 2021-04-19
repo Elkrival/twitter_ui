@@ -58,6 +58,7 @@
     align-self: center;
     border: solid white 1px;
     align-self: flex-end;
+
 }
 .hashtag_section{
     background-color: white;
@@ -77,4 +78,21 @@
         background-color:rgba(139, 235, 234, .5);
         color: #1DA1F2;
         margin: 4px;
+}
+.btn__container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  font-family: Arial;
+  color: #2424e0;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
 }

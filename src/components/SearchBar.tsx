@@ -17,7 +17,7 @@ export default function SearchBar(props: any){
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({query})
     }
-    return httpHelpers("http://localhost:8000/api/v1/search",options).then((res: { result: any; hashtags: any; }) => {
+    return httpHelpers("http://localhost:8000/api/v1/search",options).then((res: { result: any; hashtags: any; next_results: any; }) => {
       props.dispatch({
         type: 'UPDATE_TWEETS',
         payload: res.result
@@ -25,6 +25,10 @@ export default function SearchBar(props: any){
       props.dispatch({
         type: 'SET_HASHTAGS',
         payload: res.hashtags
+      })
+      props.dispatch({
+        type: 'SET_NEXT_RESULTS_QUERY',
+        payload: res.next_results
       })
     })
   }

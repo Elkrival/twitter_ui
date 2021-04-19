@@ -3,7 +3,6 @@ import Hashtag from './Hashtag'
 import Header from './Header';
 
 export default function HashtagList(props){
-    console.log(props);
     return (
         <div className="hashtag_section pb-6">
             <Header text="Filter by Hashtag" />

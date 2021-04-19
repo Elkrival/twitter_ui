@@ -1,7 +1,6 @@
 import React from 'react';
 import Hashtag from './Hashtag'
 export default function Card(props){
-    console.log(props, "IN THE CITY")
     return(
         <div className="card w-full">
                 <img className="card__image" src={props.data.profile_image_url} />
